@@ -1,0 +1,41 @@
+<!--<%= WelcomeHelper::Google.new.A request %>-->
+
+<!--<%= debug request.class.included_modules %>-->
+
+<!--<%= Class.superclass %>-->
+<!--<%= Module.superclass %>-->
+
+
+<!--<%= Foo.new.two %>-->
+
+<!--<%= debug self %>-->
+
+<!--<%= debug self.instance_variables.sort %>-->
+
+<!--<%= Foobar.methods %>-->
+
+<!--<%= debug Foobar.instance_methods.grep /^one|two/ %>-->
+<!--<%= debug Foobar.singleton_methods.grep /^one|two/ %>-->
+<!--<%= debug Foobar.methods.grep /^one|two/ %>-->
+
+<!--<%= debug String.ancestors %>-->
+<!--<%= debug String.superclass %>-->
+<!--<%= debug "".methods %>-->
+<!--<%= debug "".size %>-->
+<!--<%= "".class %>-->
+
+<% testobject =Foobar.new %>
+<% Foobar.one('google') {} %>
+<%= debug [testobject.class,testobject.class.singleton_methods, testobject.class.instance_methods(false),testobject.instance_values] %>
+
+<% a = Baz.new(1,2).get_bindings %>
+<% b = Baz.new(3,4).get_bindings %>
+
+<%=  a===b %>
+<%=  eval('@open',a) %>
+<%=  eval('@open',b) %>
+
+<%= debug a %>
+<%= debug b %>
+
+<% BarFoo.new.foo %>
